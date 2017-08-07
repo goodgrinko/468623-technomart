@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Irina Grinko](https://up.htmlacademy.ru/htmlcss/18/user/468623).
-* Наставник: `Неизвестно`.
+* Наставник: [Anton Popov](https://htmlacademy.ru/profile/joker).
 
 ---
 
