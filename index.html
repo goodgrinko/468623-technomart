@@ -11,7 +11,8 @@
       <h1 class="logo">Техномарт</h1>
       <div class="top-menu">
         <form class="search" action="/" method="get">
-          <input class="search__input-field" type="text" placeholder="Поиск:">
+          <input class="search__input-field" type="text" name="input-field" placeholder="Поиск:">
+          <input type="submit" name="send-search" value="Отправить">
         </form>
         <a href="#">Закладки: 0</a>
         <a href="#">Корзина: 0</a>
@@ -66,7 +67,7 @@
           <h3>Доставка</h3>
           <a href="#">Бесплатно</a>
         </section>
-        <section class="promo-slider">
+        <article class="promo-slider">
           <input type="radio" id="perforators" name="toggle" checked>
           <input type="radio" id="drills" name="toggle">
           <div class="promo-slider__controls">
@@ -74,64 +75,64 @@
             <label for="drills"></label>
           </div>
           <div class="promo-slider__inner">
-            <div class="promo-slider__item">
-              <b>Перфораторы</b>
+            <section class="promo-slider__item">
+              <h1>Перфораторы</h1>
               <p>Настоящие мужские игрушки</p>
               <a class="btn" href="#">Открыть каталог</a>
               <img src="img/perforators.png" width="620" height="226" alt="Каталог перфораторов">
-            </div>
-            <div class="promo-slider__item">
-              <b>Дрели</b>
+            </section>
+            <section class="promo-slider__item">
+              <h1>Дрели</h1>
               <p>Соседям на радость</p>
               <a class="btn" href="#">Открыть каталог</a>
               <img src="img/drills.png" width="620" height="226" alt="Каталог дрелей">
-            </div>
+            </section>
           </div>
-        </section>
+        </article>
       </article>
       <section class="products">
         <h2>Популярные товары
-        <a class="btn" href="#">Все популярные товары</a>
+          <a class="btn" href="#">Все популярные товары</a>
         </h2>
-        <a class="products__item" href="#">
+        <article class="products__item">
           <img src="img/bosch-9000.png" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
           <h3>Перфоратор BOSCH BFG 9000</h3>
           <span class="old-price">32500 Р.</span>
           <b class="price">25500 Р.</b>
-        </a>
-        <div class="actions">
-          <button class="actions__item actions__item--buy" type="button" name="buy">Купить</button>
-          <button class="actions__item actions__item--bookmarks" type="button" name="bookmarks">В закладки</button>
-        </div>
-        <a class="products__item" href="#">
+          <div class="actions">
+            <a href="#" class="actions__item actions__item--buy">Купить</a>
+            <a href="#" class="actions__item actions__item--bookmarks">В закладки</a>
+          </div>
+        </article>
+        <article class="products__item">
           <img src="img/bosch-3000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
           <h3>Перфоратор BOSCH BFG 3000</h3>
           <span class="old-price">22500 Р.</span>
           <b class="price">15500 Р.</b>
-        </a>
-        <div class="actions">
-          <button class="actions__item actions__item--buy" type="button" name="buy">Купить</button>
-          <button class="actions__item actions__item--bookmarks" type="button" name="bookmarks">В закладки</button>
-        </div>
-        <a class="products__item" href="#">
+          <div class="actions">
+            <a href="#" class="actions__item actions__item--buy">Купить</a>
+            <a href="#" class="actions__item actions__item--bookmarks">В закладки</a>
+          </div>
+        </article>
+        <article class="products__item">
           <img src="img/bosch-6000.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
           <h3>Перфоратор BOSCH BFG 6000</h3>
           <span class="old-price">30500 Р.</span>
           <b class="price">25500 Р.</b>
-        </a>
-        <div class="actions">
-          <button class="actions__item actions__item--buy" type="button" name="buy">Купить</button>
-          <button class="actions__item actions__item--bookmarks" type="button" name="bookmarks">В закладки</button>
-        </div>
-        <a class="products__item products__item--new" href="#">
+          <div class="actions">
+            <a href="#" class="actions__item actions__item--buy">Купить</a>
+            <a href="#" class="actions__item actions__item--bookmarks">В закладки</a>
+          </div>
+        </article>
+        <article class="products__item products__item--new">
           <img src="img/bosch-2000.png" width="144" height="128" alt="Перфоратор BOSCH BFG 2000">
           <h3>Перфоратор BOSCH BFG 2000</h3>
           <b class="price">12500 Р.</b>
-        </a>
-        <div class="actions">
-          <button class="actions__item actions__item--buy" type="button" name="buy">Купить</button>
-          <button class="actions__item actions__item--bookmarks" type="button" name="bookmarks">В закладки</button>
-        </div>
+          <div class="actions">
+            <a href="#" class="actions__item actions__item--buy">Купить</a>
+            <a href="#" class="actions__item actions__item--bookmarks">В закладки</a>
+          </div>
+        </article>
       </section>
       <section class="brands">
         <h2>Популярные производители
@@ -162,7 +163,7 @@
           <img src="img/metabo.png" width="204" height="69" alt="Metabo">
         </a>
       </section>
-      <section class="services">
+      <article class="services">
         <h2>Сервисы</h2>
         <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <div class="services-slider">
@@ -175,22 +176,22 @@
             <label for="credit">Кредит</label>
           </div>
           <div class="services-slider__inner">
-            <div class="services-slider__item services-slider__item--delivery">
-              <b>Доставка</b>
+            <section class="services-slider__item services-slider__item--delivery">
+              <h1>Доставка</h1>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
-            </div>
-            <div class="services-slider__item services-slider__item--garants">
-              <b>Гарантия</b>
+            </section>
+            <section class="services-slider__item services-slider__item--garants">
+              <h1>Гарантия</h1>
               <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-            </div>
-            <div class="services-slider__item services-slider__item--credit">
-              <b>Кредит</b>
+            </section>
+            <section class="services-slider__item services-slider__item--credit">
+              <h1>Кредит</h1>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
               <a class="btn" href="#">Отправить заявку</a>
-            </div>
+            </section>
           </div>
         </div>
-      </section>
+      </>
       <article class="about-us">
         <section class="about-us__description">
           <h2>Компания Техномарт</h2>
@@ -238,9 +239,9 @@
         Все права защищены
       </p>
       <div class="social">
-        <a class="social--vk" href="#">Вконтакте</a>
-        <a class="social--fb" href="#">Фейсбук</a>
-        <a class="social--in" href="#">Инстаграм</a>
+        <a class="social social--vk" href="#">Вконтакте</a>
+        <a class="social social--fb" href="#">Фейсбук</a>
+        <a class="social social--in" href="#">Инстаграм</a>
       </div>
       <p>
         Обратная связь:<br>
