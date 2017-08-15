@@ -1,0 +1,22 @@
+body {
+  min-width: 960px;
+  font-family: "Cuprum","PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+  /*Задаю фон странице, иначе цвет шрифта сольется с фоном*/
+  background-color: rgb(128,128,128);
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #3d546e;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
