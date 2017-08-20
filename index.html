@@ -11,8 +11,9 @@
       <h1 class="logo">Техномарт</h1>
       <div class="top-menu">
         <form class="search" action="/" method="get">
-          <input class="search__input-field" type="text" name="input-field" placeholder="Поиск:">
-          <input type="submit" name="send-search" value="Отправить">
+          <label class="visually-hidden" for="input-field">Поиск</label>
+          <input class="search__input-field" type="text" name="input-field" id="input-field" placeholder="Поиск:">
+          <button class="visually-hidden" type="submit">Отправить</button>
         </form>
         <a href="#">Закладки: 0</a>
         <a href="#">Корзина: 0</a>
@@ -253,7 +254,7 @@
       </p>
     </footer>
     <section class="modal">
-      <button class="btn-close" type="button" name="button">&times;</button>
+      <button class="btn-close" type="button" name="button">Закрыть</button>
       <form class="writeus" action="index.html" method="post">
         <label for="name">Ваше имя:</label>
         <input type="text" name="name" id="name" value="name" placeholder="Представьтесь, пожалуйста">
@@ -267,7 +268,7 @@
       </footer>
     </section>
     <section class="modal-map">
-      <button class="btn-close" type="button" name="button">&times;</button>
+      <button class="btn-close" type="button" name="button">Закрыть</button>
       <a href="#">Карта с доп.сервиса</a>
     </section>
   </body>
