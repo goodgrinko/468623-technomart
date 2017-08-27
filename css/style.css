@@ -857,7 +857,6 @@ a {
 
 .service-slider {
   display: flex;
-  width: 940px;
   margin-top: 74px;
 }
 
@@ -879,12 +878,12 @@ a {
 
 .service-slider__controls {
   position: relative;
-  width: 240px;
 }
 
 .service-slider__controls label {
   display: block;
   padding: 14px 22px 15px 22px;
+  min-width: 240px;
 
   font-size: 21px;
   font-weight: 700;
@@ -900,12 +899,13 @@ a {
 .service-slider__controls label:hover,
 .service-slider__controls label:focus {
 
-  box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
+  box-shadow: 0 1px 0 #293449, 0 1px 0 #405069;
   background-color: #293449;
 }
 
-/*Можно ли так? По макету, вид лейбла изменяется, когда этот слайд выбран*/
-.service-slider__controls input:checked {
+.service-slider__btn-1:checked ~ .service-slider__controls .service-slider__control-1,
+.service-slider__btn-2:checked ~ .service-slider__controls .service-slider__control-2,
+.service-slider__btn-3:checked ~ .service-slider__controls .service-slider__control-3 {
   color: #3d546e;
 
   background-color: #ffffff;
@@ -913,19 +913,36 @@ a {
 }
 
 .service-slider__inner {
-  margin-left: 80px;
-  width: 620px;
-  min-height: 284px;
+  margin-left: 20px;
+  width: 300%;
   overflow: hidden;
+  height: 284px;
 }
 
-.service-slider__items {
-  width: 300%
-  min-height: 272px;
+.service-slider__item {
+  min-width: 620px;
+  min-height: 284px;
+
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.service-slider__item--delivery {
+  background-image: url(../img/delivery.png);
+}
+
+.service-slider__item--garants {
+  background-image: url(../img/garants.png);
+}
+
+.service-slider__item--credit {
+  background-image: url(../img/credit.png);
 }
 
 .service-slider__item h3 {
   margin: 0;
+  margin-top: 1px;
+  margin-bottom: 25px;
 
   font-size: 36px;
   font-weight: 400;
@@ -933,11 +950,23 @@ a {
   color: #3d546e;
 }
 
-
 .service-slider__item p {
+  width: 275px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   color: #000000;
+}
+
+.service-slider__btn-1:checked ~ .service-slider__items .service-slider__item--delivery {
+  transform: translate(0);
+}
+
+.service-slider__btn-2:checked ~ .service-slider__inner .service-slider__item--garants {
+  transform: translateY(-287px);
+}
+
+.service-slider__btn-3:checked ~ .service-slider__inner .service-slider__item--credit {
+  transform: translateY(-574px);
 }
 
 .about-us {
