@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -11,7 +11,7 @@
     <header>
       <div class="top-menu">
         <div class="top-menu__wrapper">
-          <h1 class="logo">Техномарт</h1>
+          <h1 class="logo logo--top">Техномарт</h1>
           <form class="search" action="/" method="get">
             <label class="visually-hidden" for="input-field">Поиск</label>
             <input class="search__input-field" type="text" name="input-field" id="input-field" placeholder="Поиск:">
@@ -24,13 +24,15 @@
       </div>
       <div class="header-wrapper">
         <div class="top-info">
-          <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
-          <span>+7 (812) 555-05-55</span>
-          <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-        </div>
-        <div class="for-guests">
-          <button class="for-guests_btn for-guests_btn--login" type="button" name="button">Войти</button>
-          <button class="for-guests_btn for-guests_btn--signup" type="button" name="button">Регистрация</button>
+          <p>Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</p>
+          <div class="top-info__contacts">
+            <span class="top-info__phone">+7&nbsp;(812)&nbsp;555-05-55</span>
+            <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+          </div>
+          <div class="for-guests">
+            <button class="for-guests_btn for-guests_btn--login" type="button" name="button">Войти</button>
+            <button class="for-guests_btn for-guests_btn--signup" type="button" name="button">Регистрация</button>
+          </div>
         </div>
         <nav class="main-menu">
           <a>Главная</a>
@@ -58,6 +60,32 @@
             <h3>Техника</h3>
             <a href="#">Для стройки</a>
           </section>
+          <article class="promo-slider">
+            <input class="promo-slider__btn-1" type="radio" id="promo-btn-1" name="toggle" checked>
+            <input class="promo-slider__btn-2" type="radio" id="promo-btn-2" name="toggle">
+            <div class="promo-slider__controls">
+              <label class="promo-slider__control promo-slider__control--1" for="promo-btn-1"></label>
+              <label class="promo-slider__control promo-slider__control--2" for="promo-btn-2"></label>
+            </div>
+            <div class="promo-slider__arrows">
+              <a class="promo-slider__arrow promo-slider__arrow--left" data-direction="left" href="#"></a>
+              <a class="promo-slider__arrow promo-slider__arrow--right" data-direction="right" href="#"></a>
+            </div>
+            <div class="promo-slider__inner">
+              <div class="promo-slider__items">
+                <section class="promo-slider__item promo-slider__item--1">
+                  <h3>Перфораторы</h3>
+                  <p>Настоящие мужские игрушки</p>
+                  <a class="btn" href="catalog.html">Открыть каталог</a>
+                </section>
+                <section class="promo-slider__item promo-slider__item--2">
+                  <h3>Дрели</h3>
+                  <p>Соседям на радость</p>
+                  <a class="btn" href="catalog.html">Открыть каталог</a>
+                </section>
+              </div>
+            </div>
+          </article>
           <section class="promo__item promo__item--sale">
             <h3>Скидки 50%</h3>
             <a href="#">На 350 товаров</a>
@@ -66,28 +94,6 @@
             <h3>Доставка</h3>
             <a href="#">Бесплатно</a>
           </section>
-          <article class="promo-slider">
-            <input type="radio" id="perforators" name="toggle" checked>
-            <input type="radio" id="drills" name="toggle">
-            <div class="promo-slider__controls">
-              <label for="perforators"></label>
-              <label for="drills"></label>
-            </div>
-            <div class="promo-slider__inner">
-              <section class="promo-slider__item">
-                <h3>Перфораторы</h3>
-                <p>Настоящие мужские игрушки</p>
-                <a class="btn" href="catalog.html">Открыть каталог</a>
-                <img src="img/perforators.png" width="620" height="226" alt="Каталог перфораторов">
-              </section>
-              <section class="promo-slider__item">
-                <h3>Дрели</h3>
-                <p>Соседям на радость</p>
-                <a class="btn" href="catalog.html">Открыть каталог</a>
-                <img src="img/drills.png" width="620" height="226" alt="Каталог дрелей">
-              </section>
-            </div>
-          </article>
         </article>
         <section class="products">
           <div class="products__title">
@@ -168,29 +174,32 @@
       <section class="services">
         <div class="services__wrapper">
           <h2>Сервисы</h2>
-          <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-          <div class="services-slider">
-            <input type="radio" id="delivery" name="toggle" checked>
-            <input type="radio" id="garants" name="toggle">
-            <input type="radio" id="credit" name="toggle">
-            <div class="services-slider__controls">
-              <label for="delivery">Доставка</label>
-              <label for="garants">Гарантия</label>
-              <label for="credit">Кредит</label>
+          <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          <div class="service-slider">
+            <input type="radio" id="service-btn-1" name="toggle" checked>
+            <input type="radio" id="service-btn-2" name="toggle">
+            <input type="radio" id="service-btn-3" name="toggle">
+            <div class="service-slider__controls">
+              <label for="service-btn-1">Доставка</label>
+              <label for="service-btn-2">Гарантия</label>
+              <label for="service-btn-3">Кредит</label>
             </div>
-            <div class="services-slider__inner">
-              <div class="services-slider__item services-slider__item--delivery">
-                <h3>Доставка</h3>
-                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
-              </div>
-              <div class="services-slider__item services-slider__item--garants">
-                <h3>Гарантия</h3>
-                <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-              </div>
-              <div class="services-slider__item services-slider__item--credit">
-                <h3>Кредит</h3>
-                <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
-                <a class="btn" href="#">Отправить заявку</a>
+            <div class="service-slider__inner">
+              <div class="service-slider__items">
+                <div class="service-slider__item service-slider__item--delivery">
+                  <h3>Доставка</h3>
+                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+                </div>
+                <div class="service-slider__item service-slider__item--garants">
+                  <h3>Гарантия</h3>
+                  <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+                </div>
+                <div class="service-slider__item service-slider__item--credit">
+                  <h3>Кредит</h3>
+                  <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+                  <a class="btn" href="#">Отправить заявку</a>
+                </div>
               </div>
             </div>
           </div>
