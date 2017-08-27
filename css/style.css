@@ -670,6 +670,7 @@ a {
 
 .item {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
@@ -697,6 +698,12 @@ a {
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
+.item__image {
+  width: 218px;
+  height: 158px;
+  margin: auto;
+}
+
 .item__title {
   font-size: 18px;
   line-height: 20px;
@@ -722,38 +729,63 @@ a {
 
 .item__actions {
   display: none;
+  position: absolute;
+  width: 218px;
+  height: 158px;
+  top:0;
+  padding: 44px 42px 0;
+
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
+
+  background-color: #fff;
 }
 
-.item__actions--buy {
+.item__btn {
+  display: block;
+  width: 135px;
+  margin-bottom: 5px;
+
+  text-align: center;
+}
+
+.item:hover .item__actions {
+    display: block;
+}
+
+.item__btn--buy {
+  padding-top: 12px;
+  padding-bottom: 12px;
+
   box-shadow: inset 0 -3px 0 #367315;
   background-color: #63a63e;
 }
 
-.item__actions--buy:hover,
-.item__actions--buy:focus {
+.item__btn--buy:hover,
+.item__btn--buy:focus {
   background-color: #5fbb2d;
 }
 
-.item__actions--buy:active {
+.item__btn--buy:active {
   background-color: #518534;
   box-shadow: none;
 }
 
-.item__actions--bookmarks {
+.item__btn--bookmarks {
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: #32425c;
 
   border: 3px solid #63a63e;
 }
 
-.item__actions--bookmarks:hover,
-.item__actions--bookmarks:focus {
+.item__btn--bookmarks:hover,
+.item__btn--bookmarks:focus {
   border: 3px solid #32425c;
 }
 
-.item__actions--bookmarks:active {
+.item__btn--bookmarks:active {
   color: rgb(50, 66, 92, 0.3);
 
   border: 3px solid rgb(50, 66, 92, 0.3);
