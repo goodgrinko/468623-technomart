@@ -47,6 +47,7 @@ a {
 
   background-color: #ff5357;
   border: none;
+  border-radius: 3px;
 }
 
 .btn:hover,
@@ -64,8 +65,23 @@ a {
   top: 105px;
   left: 25px;
   width: 195px;
+}
 
+.btn--popular {
+  position: relative;
+  width: 253px;
+}
 
+.btn--credit {
+  width: 195px;
+}
+
+.btn--about {
+   width: 220px;
+}
+
+.btn--map {
+   width: 300px;
 }
 
 .top-menu {
@@ -83,8 +99,9 @@ a {
 
 .logo {
   width: 220px;
+  margin: 0;
   padding-top: 10px;
-  padding-bottom: 13px;
+  padding-bottom: 8px;
 
   font-size: 24px;
   line-height: 24px;
@@ -93,12 +110,7 @@ a {
   text-align: center;
 
   background-color: #ff5357;
-  box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
-}
-
-.logo--top{
-  position: absolute;
-  top: -16px;
+  box-shadow: 0 5px 0 #cd193d;
 }
 
 .logo:hover {
@@ -107,10 +119,6 @@ a {
 
 .logo:active {
   background-color: #ba2732;
-}
-
-.search {
-  margin-left: 220px;
 }
 
 .search__input-field {
@@ -431,6 +439,7 @@ a {
   text-transform: uppercase;
 
   background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
 }
 
 .promo__item a:hover,
@@ -636,24 +645,50 @@ a {
 /*Popular products*/
 
 .products__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+
   background-color: #f9f5f0;
 }
 
 .products__title h2 {
   font-size: 30px;
+  font-weight: 400;
   line-height: 30px;
   text-transform: uppercase;
   color: #3d546e;
 }
 
+.products__items {
+  display: flex;
+  margin-bottom: 20px;
+}
+
 .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
+  margin-top: 20px;
+  padding-bottom: 21px;
+  min-width: 220px;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
+  text-align: center;
 
   background-color: #ffffff;
   border: 1px solid #eaeaea;
+}
+
+.item:last-child {
+  margin-right: 0;
 }
 
 .item:hover,
@@ -673,12 +708,19 @@ a {
 }
 
 .item__price {
+  min-width: 141px;
+  padding: 10px 0;
+
+  text-align: center;
   color: #ffffff;
 
-  background-color: #fc003b
+  /*background-color: #fc003b;*/
+  background-image: url(../img/red-button.svg);
+  background-repeat: no-repeat;
 }
 
 .item__actions {
+  display: none;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
@@ -717,18 +759,43 @@ a {
 }
 
 .brands__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+
   background-color: #f9f5f0;
 }
 
 .brands__title h2 {
   font-size: 30px;
+  font-weight: 400;
   line-height: 30px;
   text-transform: uppercase;
   color: #3d546e;
 }
 
+.brands__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .brands__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 220px;
+  min-height: 145px;
+  margin-right: 20px;
+  margin-top: 20px;
+
+  border: 1px solid #eaeaea;
   background-color: #ffffff;
+}
+
+.brands__item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .brands__item:hover,
@@ -766,6 +833,7 @@ a {
 }
 
 .services__wrapper h2 {
+  padding-top: 68px;
   font-size: 30px;
   font-weight: 400;
   text-transform: uppercase;
@@ -841,12 +909,24 @@ a {
 
 .about-us {
   width: 940px;
+  display: flex;
+  justify-content: space-between;
   margin: auto;
+  margin-top: 80px;
+  margin-bottom: 95px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: #000000;
+}
+
+.about-us__description {
+  width: 520px;
+}
+
+.about-us__map {
+  width: 300px;
 }
 
 .about-us h2 {
