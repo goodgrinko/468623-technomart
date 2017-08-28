@@ -74,42 +74,56 @@
                   <input type="text" name="price-from" id="price-from" value="0">
                   &mdash;
                   <label class="visually-hidden" for="price-to">Максимальная цена</label>
-                  <input type="text" name="price-to" id="price-to" value="40000">
+                  <input type="text" name="price-to" id="price-to" value="30000">
                 </div>
               </fieldset>
               <fieldset class="filter__brands">
                 <legend>Производители:</legend>
-                <input type="checkbox" name="brands" id="bosch" value="bosch" checked>
-                <label for="bosch">Bosch</label>
-                <input type="checkbox" name="brands" id="interskol" value="interskol">
-                <label for="interskol">Интерскол</label>
-                <input type="checkbox" name="brands" id="makita" value="makita" checked>
-                <label for="makita">Makita</label>
-                <input type="checkbox" name="brands" id="dewalt" value="dewalt">
-                <label for="dewalt">Dewalt</label>
-                <input type="checkbox" name="brands" id="hitachi" value="hitachi">
-                <label for="hitachi">Hitachi</label>
+                <p>
+                  <input type="checkbox" name="brands" id="bosch" value="bosch" checked>
+                  <label for="bosch">Bosch</label>
+                </p>
+                <p>
+                  <input type="checkbox" name="brands" id="interskol" value="interskol">
+                  <label for="interskol">Интерскол</label>
+                </p>
+                <p>
+                  <input type="checkbox" name="brands" id="makita" value="makita" checked>
+                  <label for="makita">Makita</label>
+                </p>
+                <p>
+                  <input type="checkbox" name="brands" id="dewalt" value="dewalt">
+                  <label for="dewalt">Dewalt</label>
+                </p>
+                <p>
+                  <input type="checkbox" name="brands" id="hitachi" value="hitachi">
+                  <label for="hitachi">Hitachi</label>
+                </p>
               </fieldset>
               <fieldset class="filter__supply">
                 <legend>Питание:</legend>
+                <p>
                   <input type="radio" name="supply" id="rechargeable" value="rechargeable" checked>
                   <label for="rechargeable">Аккумуляторные</label>
+                </p>
+                <p>
                   <input type="radio" name="supply" id="network" value="network">
                   <label for="network">Сетевые</label>
+                </p>
               </fieldset>
               <button class="filter__btn" type="button" name="button">Показать</button>
             </form>
           </section>
-          <section class="sort">
-            <b>Сортировка:</b>
-            <a class="sort__item sort__item--current" href="#">По цене</a>
-            <a class="sort__item" href="#">По типу</a>
-            <a class="sort__item" href="#">По функционалу</a>
-            <a class="sort__triangle sort__triangle--up" href="#">Сначала дешевые</a>
-            <a class="sort__trinagle sort__triangle--down" href="#">Сначала дорогие</a>
-          </section>
-          <section class="products">
-            <div class="products__inner">
+          <div class="products__inner">
+            <section class="sort">
+              <b>Сортировка:</b>
+              <a class="sort__item sort__item--current" href="#">По цене</a>
+              <a class="sort__item" href="#">По типу</a>
+              <a class="sort__item" href="#">По функционалу</a>
+              <a class="sort__triangle sort__triangle--up" href="#">Сначала дешевые</a>
+              <a class="sort__triangle sort__triangle--down" href="#">Сначала дорогие</a>
+            </section>
+            <section class="products">
               <article class="item">
                 <div class="item__image">
                   <img src="img/bosch-3000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
@@ -215,18 +229,18 @@
                   <a href="#" class="item__btn item__btn--bookmarks">В закладки</a>
                 </div>
               </article>
-            </div>
+            </section>
             <nav class="pagination">
               <a class="pagination__item pagination__item--current" href="#">1</a>
               <a class="pagination__item" href="#">2</a>
               <a class="pagination__item" href="#">3</a>
-              <a class="pagination__item" href="#">Следующая</a>
+              <a class="pagination__item pagination__item--next" href="#">Следующая</a>
             </nav>
-          </section>
-      </div>
+          </div>
+        </div>
       </div>
       <section class="about-products">
-        <div class="about-products__wrapper">
+      <div class="about-products__wrapper">
           <h2> Пара слов о перфораторах</h2>
           <p>Перфоратор&nbsp;&mdash; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
       </div>
