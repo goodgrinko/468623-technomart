@@ -11,11 +11,11 @@
     <header>
       <div class="top-menu">
         <div class="top-menu__wrapper">
-          <h1 class="logo logo--top">Техномарт</h1>
+          <h1 class="logo">Техномарт</h1>
           <form class="search" action="/" method="get">
             <label class="visually-hidden" for="input-field">Поиск</label>
+            <button class="search__submit" type="submit">Отправить</button>
             <input class="search__input-field" type="text" name="input-field" id="input-field" placeholder="Поиск:">
-            <button class="visually-hidden" type="submit">Отправить</button>
           </form>
           <a class="top-menu__link top-menu__link--bookmark" href="#">Закладки: 0</a>
           <a class="top-menu__link top-menu__link--basket" href="#">Корзина: 0</a>
@@ -37,7 +37,7 @@
         <nav class="main-menu">
           <a>Главная</a>
           <a href="#">Компания</a>
-          <a href="#">Каталог</a>
+          <a href="catalog.html">Каталог</a>
           <a href="#">Новости</a>
           <a href="#">Спецпредложения</a>
           <a href="#">Доставка</a>
@@ -48,52 +48,56 @@
     <main>
       <div class="main-wrapper">
         <article class="promo">
-          <section class="promo__item promo__item--materials">
-            <h3>Материалы</h3>
-            <a href="#">На любой вкус</a>
-          </section>
-          <section class="promo__item promo__item--tools">
-            <h3>Инструмент</h3>
-            <a href="#">На все случаи</a>
-          </section>
-          <section class="promo__item promo__item--technics">
-            <h3>Техника</h3>
-            <a href="#">Для стройки</a>
-          </section>
-          <article class="promo-slider">
-            <input class="promo-slider__btn-1" type="radio" id="promo-btn-1" name="toggle" checked>
-            <input class="promo-slider__btn-2" type="radio" id="promo-btn-2" name="toggle">
-            <div class="promo-slider__controls">
-              <label class="promo-slider__control promo-slider__control--1" for="promo-btn-1"></label>
-              <label class="promo-slider__control promo-slider__control--2" for="promo-btn-2"></label>
-            </div>
-            <div class="promo-slider__arrows">
-              <a class="promo-slider__arrow promo-slider__arrow--left" data-direction="left" href="#"></a>
-              <a class="promo-slider__arrow promo-slider__arrow--right" data-direction="right" href="#"></a>
-            </div>
-            <div class="promo-slider__inner">
-              <div class="promo-slider__items">
-                <section class="promo-slider__item promo-slider__item--1">
-                  <h3>Перфораторы</h3>
-                  <p>Настоящие мужские игрушки</p>
-                  <a class="btn btn--slider" href="catalog.html">Открыть каталог</a>
-                </section>
-                <section class="promo-slider__item promo-slider__item--2">
-                  <h3>Дрели</h3>
-                  <p>Соседям на радость</p>
-                  <a class="btn btn--slider" href="catalog.html">Открыть каталог</a>
-                </section>
+          <div class="promo__column">
+            <section class="promo__item promo__item--materials">
+              <h3>Материалы</h3>
+              <a href="#">На любой вкус</a>
+            </section>
+            <section class="promo__item promo__item--tools">
+              <h3>Инструмент</h3>
+              <a href="#">На все случаи</a>
+            </section>
+            <article class="promo-slider">
+              <input class="promo-slider__btn-1" type="radio" id="promo-btn-1" name="toggle" checked>
+              <input class="promo-slider__btn-2" type="radio" id="promo-btn-2" name="toggle">
+              <div class="promo-slider__controls">
+                <label class="promo-slider__control promo-slider__control--1" for="promo-btn-1"></label>
+                <label class="promo-slider__control promo-slider__control--2" for="promo-btn-2"></label>
               </div>
-            </div>
-          </article>
-          <section class="promo__item promo__item--sale">
-            <h3>Скидки 50%</h3>
-            <a href="#">На 350 товаров</a>
-          </section>
-          <section class="promo__item promo__item--delivery">
-            <h3>Доставка</h3>
-            <a href="#">Бесплатно</a>
-          </section>
+              <div class="promo-slider__arrows">
+                <a class="promo-slider__arrow promo-slider__arrow--left" data-direction="left" href="#"></a>
+                <a class="promo-slider__arrow promo-slider__arrow--right" data-direction="right" href="#"></a>
+              </div>
+              <div class="promo-slider__inner">
+                <div class="promo-slider__items">
+                  <section class="promo-slider__item promo-slider__item--1">
+                    <h3>Перфораторы</h3>
+                    <p>Настоящие мужские игрушки</p>
+                    <a class="btn btn--slider" href="catalog.html">Открыть каталог</a>
+                  </section>
+                  <section class="promo-slider__item promo-slider__item--2">
+                    <h3>Дрели</h3>
+                    <p>Соседям на радость</p>
+                    <a class="btn btn--slider" href="catalog.html">Открыть каталог</a>
+                  </section>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="promo__column">
+            <section class="promo__item promo__item--technics">
+              <h3>Техника</h3>
+              <a href="#">Для стройки</a>
+            </section>
+            <section class="promo__item promo__item--sale">
+              <h3>Скидки 50%</h3>
+              <a href="#">На 350 товаров</a>
+            </section>
+            <section class="promo__item promo__item--delivery">
+              <h3>Доставка</h3>
+              <a href="#">Бесплатно</a>
+            </section>
+          </div>
         </article>
         <section class="products">
           <div class="products__title">
