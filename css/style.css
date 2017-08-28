@@ -341,19 +341,61 @@ a {
 }
 
 .for-users {
-  width: 940px;
-  margin: auto;
+  margin-left: 51px;
+  margin-top: 46px;
 }
 
 .for-users__btn {
-  font-size: 18px;
-  line-height: 18px;
-  color: #000000;
+  min-width: 299px;
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 10px;
 
   background-color: #ffffff;
 }
 
+.for-users__btn a {
+  display: inline-block;
+  font-size: 21px;
+  font-style: normal;
+  line-height: 18px;
+  color: #000000;
+}
+
+.for-users__username {
+  position: relative;
+  padding-left: 45px;
+}
+
+.for-users__username::before {
+  position: absolute;
+  left: 13px;
+  content: "";
+  width: 20px;
+  height: 18px;
+
+  background-image: url(../img/icon-user.svg);
+  background-repeat: no-repeat;
+}
+
+.for-users__logout {
+  width: 20px;
+  height: 17px;
+  padding-left: 65px;
+
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+
+  background-image: url(../img/icon-logout.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 .for-users__link {
+  display: inline-block;
+  margin-top: 10px;
+
   font-size: 16px;
   line-height: 18px;
   color: #32425c;
@@ -370,6 +412,27 @@ a {
   color: #32425c;
 
   opacity: 0.3;
+}
+
+.for-users__link--order {
+  margin-left: 13px;
+}
+
+.for-users__link--personal {
+  position: relative;
+  margin-left: 30px;
+}
+
+.for-users__link--personal::before {
+  content: "";
+  position: absolute;
+  left: -17px;
+  bottom: 6px;
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+  background-color: #32425c;
 }
 
 .main-menu {
@@ -1029,14 +1092,55 @@ a {
   margin: auto;
 }
 
+.breadcrumbs {
+  margin-top: 23px;
+}
+
 .breadcrumbs a {
+  display: inline-block;
+
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
   color: #000000;
 }
 
+.breadcrumbs__home {
+  width: 14px;
+  height: 12px;
+
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+
+  background-image: url(../img/icon-home.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.breadcrumbs__link {
+  position: relative;
+  margin-left: 40px;
+}
+
+.breadcrumbs__link::before {
+  position: absolute;
+  left:-22px;
+  bottom: 5px;
+  content: "";
+  width: 8px;
+  height: 12px;
+
+  background-image: url(../img/icon-right-small.svg);
+  background-repeat: no-repeat;
+}
+
 .page-title {
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-bottom: 32px;
+
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
@@ -1046,11 +1150,26 @@ a {
   background-color: #f2f6f8;
 }
 
+.main-inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filters {
+  width: 220px;
+  margin-right: 20px;
+}
+
 .filter {
   color: #000000;
 }
 
 .filter legend {
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
@@ -1058,10 +1177,16 @@ a {
 }
 
 .filters b {
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 15px;
+  padding-left: 18px;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
+  text-transform: uppercase;
   color: #000000;
 
   background-color: #f7f3ec;
@@ -1079,11 +1204,65 @@ a {
 }
 
 .filter fieldset {
+  padding: 0;
+  margin: 0;
+
   border: none;
 }
 
 .filter fieldset:not(:last-of-type) {
   border-bottom: 1px solid #e5e5e5;
+}
+
+.filter__controls {
+  position: relative;
+  width: inherit;
+  min-height: 80px;
+  margin-bottom: 9px;
+}
+
+.filter__scale {
+  width: 180px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+
+  background-color: #d7dcde;
+}
+
+.filter__toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+}
+
+.filter__toggle--min {
+  top: 30px;
+  left: 20px;
+}
+
+.filter__toggle--max{
+  top: 30px;
+  right: 40px;
+}
+
+.filter__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.filter__price input{
+  width: 95px;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .filter__brands label {
@@ -1112,6 +1291,9 @@ a {
 }
 
 .sort {
+  width: 700px;
+  align-self: flex-start;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -1142,6 +1324,19 @@ a {
   color: #ee3643;
 
   border: none;
+}
+
+.products {
+  width: 700px;
+}
+
+.products__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products__inner .item:nth-child(3n){
+  margin-right: 0;
 }
 
 .pagination__item {
