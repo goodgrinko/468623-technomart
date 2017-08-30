@@ -552,6 +552,19 @@ a {
   margin: auto;
 }
 
+.new::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 59px;
+
+  background-image: url(../img/new.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 .promo {
   display: flex;
   align-items: flex-start;
@@ -690,27 +703,26 @@ a {
 
 .promo-slider__controls {
   position: absolute;
-  left: 50%;
-  bottom: 36px;
-  z-index: 100;
+  left: 295px;
+  bottom: 33px;
   text-align: center;
-  font-size: 0;
+  z-index: 100;
 }
 
 .promo-slider__control {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
   border: 2px solid #ffffff;
   background-color: #ffffff;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.promo-slider__control--1 {
-  margin-right: 10px;
+.promo-slider__control--2 {
+  margin-right: 6px;
 }
 
 .promo-slider__btn-1:checked ~ .promo-slider__controls .promo-slider__control--1,
@@ -724,14 +736,33 @@ a {
 
 .promo-slider__arrow {
   position: absolute;
-  top: 111px;
-  font-size: 45px;
-  line-height: 45px;
-  color: #ffffff;
-  background: none;
-  text-decoration: none;
-  cursor: pointer;
+  top: 112px;
   z-index: 50;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.promo-slider__arrow--left::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  width: 22px;
+  height: 40px;
+
+  background-image: url(../img/icon-left.svg);
+  background-position: 50% 50%;
+}
+
+.promo-slider__arrow--right::before {
+  content: "";
+  position: absolute;
+  left: 578px;
+  width: 22px;
+  height: 40px;
+
+  background-image: url(../img/icon-right.svg);
+  background-position: 50% 50%;
 }
 
 .promo-slider__item h3 {
