@@ -76,10 +76,12 @@ a {
 }
 
 .btn--about {
-   width: 220px;
+  padding: 7px 0;
+  width: 220px;
 }
 
 .btn--map {
+  padding: 7px 0;
    width: 300px;
 }
 
@@ -850,14 +852,17 @@ a {
 }
 
 .item__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 218px;
+  min-height: 167px;
   margin: auto;
-  vertical-align: middle;
 }
 
 .item__title {
   width: 190px;
-  margin: 11px 0 40px;
+  margin: 12px 0 40px;
 
   font-size: 18px;
   line-height: 20px;
@@ -888,14 +893,10 @@ a {
 .item__actions {
   display: none;
   position: absolute;
-  width: 218px;
-  height: 158px;
+  min-width: 220px;
+  min-width: 164px;
   top:0;
   padding: 44px 42px 0;
-
-  font-size: 14px;
-  font-weight: 400;
-  text-transform: uppercase;
 
   background-color: #fff;
 }
@@ -903,9 +904,15 @@ a {
 .item__btn {
   display: block;
   width: 135px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 
   text-align: center;
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  border-radius: 3px;
 }
 
 .item:hover .item__actions {
@@ -913,8 +920,7 @@ a {
 }
 
 .item__btn--buy {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 10px 0;
 
   box-shadow: inset 0 -3px 0 #367315;
   background-color: #63a63e;
@@ -931,8 +937,7 @@ a {
 }
 
 .item__btn--bookmarks {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 7px 0;
   color: #32425c;
 
   border: 3px solid #63a63e;
@@ -1131,9 +1136,7 @@ a {
   width: 940px;
   display: flex;
   justify-content: space-between;
-  margin: auto;
-  margin-top: 80px;
-  margin-bottom: 95px;
+  margin: 80px auto 86px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -1145,7 +1148,7 @@ a {
   width: 520px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .about-us__map {
@@ -1153,20 +1156,32 @@ a {
 }
 
 .about-us h2 {
+  margin: 0 0 29px;
   font-family: Cuprum, Arial, sans-serif;
   font-size: 30px;
   font-weight: 400;
   text-transform: uppercase;
 }
 
+.about-us__description p {
+  margin: 0 0 23px;
+  word-wrap: break-word;
+}
+
+.about-us__map p {
+  margin: 0;
+  word-wrap: break-word;
+}
+
 .about-us ul {
+  margin: 0 0 37px;
   font-family: Cuprum, Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
   list-style: none;
 }
 
-.about-us li {
+.about-us li:not(:last-child) {
   padding-bottom: 20px;
 }
 
@@ -1178,8 +1193,7 @@ a {
 }
 
 .about-us__map img {
-  margin-top: 25px;
-  margin-bottom: 40px;
+  margin: 34px 0 31px;
 }
 
 .inner-page {
@@ -1188,7 +1202,7 @@ a {
 }
 
 .breadcrumbs {
-  margin-top: 23px;
+  margin-top: 21px;
 }
 
 .breadcrumbs a {
@@ -1216,7 +1230,7 @@ a {
 
 .breadcrumbs__link {
   position: relative;
-  margin-left: 40px;
+  margin-left: 33px;
 }
 
 .breadcrumbs__link::before {
@@ -1232,9 +1246,8 @@ a {
 }
 
 .page-title {
-  padding-left: 30px;
-  padding-top: 30px;
-  padding-bottom: 32px;
+  margin: 19px 0 20px;
+  padding: 30px 0 29px 28px;
 
   font-size: 30px;
   line-height: 30px;
@@ -1264,10 +1277,9 @@ a {
 
 .filter legend {
   padding: 0;
-  margin: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 11px 0 14px;
 
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
@@ -1276,9 +1288,7 @@ a {
 
 .filters b {
   display: block;
-  padding-top: 14px;
-  padding-bottom: 15px;
-  padding-left: 18px;
+  padding: 10px 18px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -1321,7 +1331,7 @@ a {
   width: 180px;
   height: 2px;
   position: absolute;
-  top: 50%;
+  top: 49%;
   left: 20px;
 
   background-image: linear-gradient(to right, #6ce6a6 80%, #d7dcde 20%);
@@ -1357,12 +1367,27 @@ a {
   display: inline-block;
   width: 95px;
   text-align: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 11px 0 9px;
 
   border: none;
   color: #000000;
   background-color: #f7f4ec;
+}
+
+.filter__brands legend {
+  margin: 16px 0 0 0;
+}
+
+.filter__supply legend {
+  margin: 20px 0 0 0;
+}
+
+.filter__brands p {
+  margin: 13px 0 20px;
+}
+
+.filter__supply p {
+  margin: 11px 0 20px;
 }
 
 .filter__brands label,
@@ -1421,9 +1446,22 @@ a {
   background-repeat: no-repeat;
 }
 
+.filter label::before {
+  opacity: 0.7;
+}
+
+.filter label:hover::before,
+.filter label:focus::before {
+  opacity: 1;
+}
+
+.filter label:disabled::before {
+  opacity: 0.3;
+}
+
 .filter__btn {
-  padding: 10px 35px 11px;
-  margin-top: 75px;
+  padding: 10px 38px 8px;
+  margin-top: 61px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -1433,12 +1471,12 @@ a {
   cursor: pointer;
 
   border: 1px solid #e5e5e5;
+  border-radius: 3px;
   background-color: #ffffff;
 }
 
 .sort {
-  padding-top: 14px;
-  padding-bottom: 15px;
+  padding: 11px 0 8px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -1450,7 +1488,7 @@ a {
 }
 .sort b {
   padding-left: 19px;
-  padding-right: 139px;
+  padding-right: 135px;
 
   font-weight: 400;
 }
@@ -1464,6 +1502,10 @@ a {
   color: rgba(0, 0, 0, 0.3);
 
   border-bottom: 1px dotted #ee3643;
+}
+
+.sort__item:nth-child(4) {
+  margin-right: 42px;
 }
 
 .sort__item:hover,
@@ -1489,25 +1531,48 @@ a {
 }
 
 .sort__triangle--up {
+  margin-right: 18px;
+  opacity: 0.3;
+
+  background-image: url(../img/icon-up.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.sort__triangle--up-active {
+  margin-right: 18px;
+  opacity: 1;
+
   background-image: url(../img/icon-up-dir.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
 .sort__triangle--down {
-  background-image: url(../img/icon-down-dir.svg);
+  opacity: 0.3;
+  background-image: url(../img/icon-down.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
+.sort__triangle:hover,
+.sort__triangle:focus {
+  opacity: 1;
+}
+
+.products--inner {
+  margin-top: 0;
+}
+
 .pagination {
-  margin-top: 52px;
-  margin-bottom: 30px;
+  margin-top: 48px;
+  margin-bottom: 61px;
 }
 
 .pagination__item {
   display: inline-block;
-  padding: 10px 16px 12px 17px;
+  padding: 9px 14px 9px 15px;
+  margin-right: 6px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -1515,11 +1580,12 @@ a {
   color: #000000;
 
   border: 1px solid #e5e5e5;
+  border-radius: 3px;
   background-color: #ffffff;
 }
 
 .pagination__item--next {
-  padding: 10px 32px 11px;
+  padding: 9px 30px;
 
   text-transform: uppercase;
 }
@@ -1532,17 +1598,20 @@ a {
 }
 
 .pagination__item:hover,
-.pagination__item:focus {
+.pagination__item:focus,
+.filter__btn:hover,
+.filter__btn:focus {
   border: 1px solid #bdc6ca;
 }
 
-.pagination__item:active {
+.pagination__item:active,
+.filter__btn:active {
   border: 1px solid #ee3643;
 }
 
 .about-products {
   width: 100%;
-  padding: 63px 0 63px;
+  padding: 63px 0 46px;
 
   background-color: #f2f6f8
 }
@@ -1553,6 +1622,8 @@ a {
 }
 
 .about-products h2 {
+  margin: 0;
+
   font-size: 30px;
   font-weight: 400;
   text-transform: uppercase;
@@ -1560,6 +1631,8 @@ a {
 }
 
 .about-products p {
+  margin: 23px 0;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -1579,7 +1652,7 @@ a {
   flex-wrap: wrap;
   width: 940px;
   margin: auto;
-  padding-bottom: 50px;
+  padding-bottom: 49px;
 }
 
 .logo--bottom {
@@ -1608,8 +1681,7 @@ a {
   display: flex;
   justify-content: space-between;
   min-width: 550px;
-  margin-top: 40px;
-  margin-left: 170px;
+  margin: 40px 0 0 170px;
 }
 
 .bottom-menu__promo a {
@@ -1619,13 +1691,12 @@ a {
 .bottom-menu__promo {
   display: flex;
   justify-content: space-between;
-  min-width: 530px;
-  margin-left: 80px;
-  margin-top: 32px;
+  min-width: 525px;
+  margin: 35px 0 0 86px;
 }
 
 .bottom-menu address {
-  margin-top: 30px;
+  margin-top: 35px;
 
   font-size: 18px;
   line-height: 24px;
@@ -1641,15 +1712,24 @@ a {
 
 .copyright__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 940px;
   margin: auto;
-  padding-top: 35px;
-  padding-bottom: 31px;
+  padding-top: 37px;
+  padding-bottom: 37px;
 }
 
 .copyright p {
+  margin: 0;
   font-size: 16px;
+}
+
+.copyright p:last-child {
+  margin: 0 10px 0 50px;
+}
+
+.social {
+  margin: -2px 119px 0 168px;
 }
 
 .social__btn {
