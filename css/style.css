@@ -72,6 +72,7 @@ a {
 }
 
 .btn--credit {
+  padding: 7px 0;
   width: 195px;
 }
 
@@ -920,20 +921,39 @@ a {
 }
 
 .item__btn--buy {
+  position: relative;
   padding: 10px 0;
 
   box-shadow: inset 0 -3px 0 #367315;
   background-color: #63a63e;
 }
 
-.item__btn--buy:hover,
-.item__btn--buy:focus {
-  background-color: #5fbb2d;
+.item__btn--buy::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  opacity: 0.3;
+  top: 10px;
+  left: 13px;
+
+  background-image: url(../img/icon-cart.svg);
+  background-repeat: no-repeat;
 }
 
-.item__btn--buy:active {
+.item__btn--buy:hover,
+.item__btn--buy:focus,
+.item__btn--buy:focus::before,
+.item__btn--buy:hover::before {
+  background-color: #5fbb2d;
+  opacity: 1;
+}
+
+.item__btn--buy:active,
+.item__btn--buy:active::before  {
   background-color: #518534;
   box-shadow: none;
+  opacity: 1;
 }
 
 .item__btn--bookmarks {
@@ -1042,6 +1062,7 @@ a {
   top: -50px;
   width: 10px;
   z-index: 100;
+  opacity: 0.5;
 
   background: url(../img/shadow_services.png) no-repeat;
 }
@@ -1087,12 +1108,11 @@ a {
   min-height: 281px;
 
   background-repeat: no-repeat;
-  background-position: 100% 15%;
+  background-position: 100% 100%;
 }
 
 .service-slider__item--delivery {
   background-image: url(../img/delivery.png);
-  background-position: 100% 15%;
 }
 
 .service-slider__item--garants {
@@ -1118,6 +1138,10 @@ a {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   color: #000000;
+}
+
+.service-slider__item--garants p {
+  width: 379px;
 }
 
 .service-slider__btn-1:checked ~ .service-slider__inner .service-slider__item--delivery {
@@ -1847,6 +1871,10 @@ a {
   margin-right: 20px;
 }
 
+.writeus__text {
+  padding: 19px 0 10px;
+}
+
 .writeus [placeholder] {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -1868,6 +1896,8 @@ a {
 
 .modal-map {
   visibility: hidden;
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1875,17 +1905,41 @@ a {
   width: 940px;
   height: 446px;
 
-  background-color: #565656;
+  background-image: url(../img/big-map.jpg);
+  background-position: 66% 77%;
   box-shadow: 0 0 15px 1px rgba(47, 42, 43, 0.5);
 }
 
-.modal h1 {
+.modal-basket {
+  visibility: hidden;
+}
+
+.modal-basket__title {
+  position: relative;
+  margin: 15px 10px 65px 178px;
   font-size: 30px;
   font-weight: 400;
   color: #000000;
 }
 
+.modal-basket__title::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: -97px;
+  width: 66px;
+  height: 66px;
+
+  background: url(../img/form-1.svg) no-repeat;
+}
+
+.btn--basket {
+  display: inline-block;
+  width: 220px;
+}
+
 .btn--continue {
+  margin-left: 16px;
   color: #000000;
 
   background-color: #ffffff;
