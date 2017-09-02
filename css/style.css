@@ -1253,7 +1253,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 80px auto 86px;
+  margin: 82px auto 86px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -1809,6 +1809,7 @@ a {
 
 .bottom-menu a {
   margin: 0;
+  display: block; 
 
   font-size: 18px;
   color: #f3f7f9;
@@ -1832,7 +1833,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-width: 550px;
-  margin: 40px 0 0 170px;
+  margin: 39px 0 0 170px;
 }
 
 .bottom-menu__promo a {
@@ -1847,7 +1848,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-width: 525px;
-  margin: 35px 0 0 86px;
+  margin: 37px 0 0 86px;
 }
 
 .bottom-menu address {
