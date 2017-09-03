@@ -21,6 +21,7 @@ body {
 a {
   text-decoration: none;
   color: #ffffff;
+  outline: none;
 }
 
 .visually-hidden {
@@ -46,6 +47,7 @@ a {
   text-transform: uppercase;
   color: #ffffff;
   cursor: pointer;
+  outline: none;
 
   background-color: #ff5357;
   border: none;
@@ -74,6 +76,7 @@ a {
 }
 
 .btn--credit {
+  margin-top: 28px;
   padding: 7px 0;
   width: 195px;
 }
@@ -284,7 +287,8 @@ a {
   background-color: #63a63e;
 }
 
-.top-menu__link--order:hover {
+.top-menu__link--order:hover,
+.top-menu__link--order:focus{
   background-color: #5fbb2d;
 }
 
@@ -438,6 +442,7 @@ a {
   padding-bottom: 12px;
 
   background-color: #ffffff;
+  outline: none;
 }
 
 .for-users__btn a {
@@ -557,6 +562,7 @@ a {
 .main-menu a {
   display: inline-block;
   padding: 20px 31px 23px 24px;
+  word-wrap: break-word;
 }
 
 .main-menu a:first-of-type {
@@ -878,6 +884,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
@@ -1474,6 +1481,7 @@ a {
   position: absolute;
   width: 20px;
   height: 20px;
+  cursor: pointer;
 
   background-image: url(../img/filter-button.svg);
   background-repeat: no-repeat;
@@ -1809,7 +1817,7 @@ a {
 
 .bottom-menu a {
   margin: 0;
-  display: block; 
+  display: block;
 
   font-size: 18px;
   color: #f3f7f9;
