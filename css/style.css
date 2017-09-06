@@ -885,7 +885,8 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
@@ -2118,28 +2119,79 @@ a {
   background-color: #ffffff;
 }
 
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+          }
+  30% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+          }
+  35% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
+}
+
 @keyframes bounce {
-  0% {transform: scale(0.5);}
-  30% {transform: scale(1);}
-  35% {transform: rotate(360deg);}
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+          }
+  30% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+          }
+  35% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+          }
 }
 
 .modal-show {
   visibility: visible;
-  animation-name: bounce;
-  animation-duration: 0.6s;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
 }
 
 .modal-show--map {
   visibility: visible;
 }
 
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+          }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+          }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+          }
+}
+
 @keyframes shake {
-  0%, 100% {transform: translateX(0);}
-  10%, 30%, 50%, 70%, 90% {transform: translateX(-5px);}
-  20%, 40%, 60%, 80% {transform: translateX(10px);}
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+          }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+          }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+          }
 }
 
 .modal-error {
-    animation: shake 0.3s;
+    -webkit-animation: shake 0.3s;
+            animation: shake 0.3s;
 }

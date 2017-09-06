@@ -1,21 +1,24 @@
 var previewMap = document.querySelector('.about-us__mappreview');
 var openMap = document.querySelector('.modal-map');
-var closeMap = openMap.querySelector('.btn-close');
 
-previewMap.addEventListener("click", function (evt) {
+if (openMap) {
+  var closeMap = openMap.querySelector('.btn-close');
+}
+
+previewMap.addEventListener('click', function (evt) {
   evt.preventDefault();
-  openMap.classList.add("modal-show--map");
+  openMap.classList.add('modal-show--map');
 });
 
-closeMap.addEventListener("click", function (evt) {
+closeMap.addEventListener('click', function (evt) {
   evt.preventDefault();
-  openMap.classList.remove("modal-show--map");
+  openMap.classList.remove('modal-show--map');
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
 if (evt.keyCode === 27) {
-  if (openMap.classList.contains("modal-show")) {
-    openMap.classList.remove("modal-show");
+  if (openMap.classList.contains('modal-show--map')) {
+    openMap.classList.remove('modal-show--map');
     }
   }
 });
@@ -52,22 +55,24 @@ formContact.addEventListener('submit', function (evt) {
   if (!nameContact.value || !emailContact.value || !textContact.value) {
     evt.preventDefault();
     popupContact.classList.add('modal-error');
+    popupContact.offsetWidth;
+    popupContact.classList.remove('modal-error');
   } else {
     localStorage.setItem('nameContact', nameContact.value);
     localStorage.setItem('emailContact', emailContact.value);
   }
 });
 
-closeContact.addEventListener("click", function (evt) {
+closeContact.addEventListener('click', function (evt) {
   evt.preventDefault();
-  popupContact.classList.remove("modal-show");
+  popupContact.classList.remove('modal-show');
   popupContact.classList.remove('modal-error');
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
 if (evt.keyCode === 27) {
-  if (popupContact.classList.contains("modal-show")) {
-    popupContact.classList.remove("modal-show");
+  if (popupContact.classList.contains('modal-show')) {
+    popupContact.classList.remove('modal-show');
     popupContact.classList.remove('modal-error');
     }
   }
@@ -80,31 +85,31 @@ var cancelBasket = openBasket.querySelector('.btn--continue');
 var submitBasket = openBasket.querySelector('.btn--basket');
 
 for (var i=0; i<buyItem.length; i++) {
-  buyItem[i].addEventListener("click", function (evt) {
+  buyItem[i].addEventListener('click', function (evt) {
     evt.preventDefault();
-    openBasket.classList.add("modal-show");
+    openBasket.classList.add('modal-show');
   });
 }
 
-closeBasket.addEventListener("click", function (evt) {
+closeBasket.addEventListener('click', function (evt) {
   evt.preventDefault();
-  openBasket.classList.remove("modal-show");
+  openBasket.classList.remove('modal-show');
 });
 
-cancelBasket.addEventListener("click", function (evt) {
+cancelBasket.addEventListener('click', function (evt) {
   evt.preventDefault();
-  openBasket.classList.remove("modal-show");
+  openBasket.classList.remove('modal-show');
 });
 
-submitBasket.addEventListener("click", function (evt) {
+submitBasket.addEventListener('click', function (evt) {
   evt.preventDefault();
-  openBasket.classList.remove("modal-show");
+  openBasket.classList.remove('modal-show');
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
 if (evt.keyCode === 27) {
-  if (openBasket.classList.contains("modal-show")) {
-    openBasket.classList.remove("modal-show");
+  if (openBasket.classList.contains('modal-show')) {
+    openBasket.classList.remove('modal-show');
     }
   }
 });
