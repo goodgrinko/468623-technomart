@@ -235,10 +235,10 @@
         <section class="about-us__map">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами,<br>заехав в наш офис:</p>
-          <a href="#">
+          <a class="about-us__mappreview" href="#">
             <img src="img/map.png" width="300" height="158" alt="Карта проезда: Большая Конюшенная ул., 19">
           </a>
-          <a class="btn btn--map" href="#">Заблудились? Напишите нам!</a>
+          <a class="btn btn--writeus" href="#">Заблудились? Напишите нам!</a>
         </section>
       </article>
     </main>
@@ -283,7 +283,7 @@
         </p>
       </div>
     </footer>
-    <section class="modal">
+    <section class="modal modal-writeus">
       <button class="btn-close" type="button" name="button">Закрыть</button>
       <form class="writeus" action="index.html" method="post">
         <label for="name">Ваше имя:</label>
@@ -291,14 +291,25 @@
         <input class="writeus__text" type="text" name="name" id="name" placeholder="Представьтесь, пожалуйста">
         <input class="writeus__text" type="email" name="email" id="email" placeholder="Для отправки ответа">
         <label for="letter">Текст письма:</label>
-        <textarea class="writeus__text" name="name" id="letter" rows="5" cols="62" placeholder="В свободной форме"></textarea>
+        <textarea class="writeus__text" name="text" id="letter" rows="5" cols="62" placeholder="В свободной форме"></textarea>
+        <button class="btn btn--submit" type="submit" name="button">Отправить</button>
       </form>
-      <footer class="modal__footer">
-        <button class="btn btn--writeus" type="button" name="button">Отправить</button>
-      </footer>
+      <footer class="modal__footer"></footer>
     </section>
     <section class="modal-map">
       <button class="btn-close" type="button" name="button">Закрыть</button>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.599104365153!2d30.320894615787417!3d59.938794181876176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1504595969915" width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <img src="img/big-map.jpg" width="940" height="446" alt="Наш адрес: г. Санкт-Петербург, ул. Большая Конюшенная 19">
     </section>
+    <section class="modal modal-basket">
+      <button class="btn-close" type="button" name="button">Закрыть</button>
+      <h1 class="modal-basket__title">Товар добавлен в корзину!</h1>
+      <div class="modal-basket__actions">
+        <a class="btn btn--basket" href="#">Оформить заказ</a>
+        <a class="btn btn--basket btn--continue" href="#">Продолжить покупки</a>
+      </div>
+      <footer class="modal__footer"></footer>
+    </section>
+    <script src="js/script.js"></script>
   </body>
 </html>
