@@ -27,9 +27,9 @@ submitBasket.addEventListener('click', function (evt) {
 });
 
 window.addEventListener('keydown', function (evt) {
-if (evt.keyCode === 27) {
-  if (openBasket.classList.contains('modal-show')) {
-    openBasket.classList.remove('modal-show');
+  if (evt.keyCode === 27) {
+    if (openBasket.classList.contains('modal-show')) {
+      openBasket.classList.remove('modal-show');
     }
   }
 });
@@ -82,10 +82,10 @@ closeContact.addEventListener('click', function (evt) {
 });
 
 window.addEventListener('keydown', function (evt) {
-if (evt.keyCode === 27) {
-  if (popupContact.classList.contains('modal-show')) {
-    popupContact.classList.remove('modal-show');
-    popupContact.classList.remove('modal-error');
+  if (evt.keyCode === 27) {
+    if (popupContact.classList.contains('modal-show')) {
+      popupContact.classList.remove('modal-show');
+      popupContact.classList.remove('modal-error');
     }
   }
 });
@@ -105,9 +105,9 @@ closeMap.addEventListener('click', function (evt) {
 });
 
 window.addEventListener('keydown', function (evt) {
-if (evt.keyCode === 27) {
-  if (openMap.classList.contains('modal-show--map')) {
-    openMap.classList.remove('modal-show--map');
+  if (evt.keyCode === 27) {
+    if (openMap.classList.contains('modal-show--map')) {
+      openMap.classList.remove('modal-show--map');
     }
   }
 });

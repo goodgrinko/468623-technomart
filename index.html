@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/min-style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
@@ -25,10 +25,10 @@
       </div>
       <div class="header-wrapper">
         <div class="top-info">
-          <p>Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</p>
+          <p class="top-info__text">Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</p>
           <div class="top-info__contacts">
             <span class="top-info__phone">+7&nbsp;(812)&nbsp;555-05-55</span>
-            <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+            <p class="top-info__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <div class="for-guests">
             <button class="for-guests_btn for-guests_btn--login" type="button" name="button">Войти</button>
@@ -50,7 +50,8 @@
       <div class="main-wrapper">
         <article class="promo">
           <div class="promo__column">
-            <section class="promo__item promo__item--materials new">
+            <section class="promo__item promo__item--materials">
+              <p class="new">Новинка</p>
               <h3>Материалы</h3>
               <a href="#">На любой вкус</a>
             </section>
@@ -85,7 +86,7 @@
               </div>
             </article>
           </div>
-          <div class="promo__column">
+          <div class="promo__column promo__column--2">
             <section class="promo__item promo__item--technics">
               <h3>Техника</h3>
               <a href="#">Для стройки</a>
@@ -142,7 +143,8 @@
                 <a href="#" class="item__btn item__btn--bookmarks">В закладки</a>
               </div>
             </article>
-            <article class="item new">
+            <article class="item">
+              <p class="new">Новинка</p>
               <div class="item__image">
                 <img src="img/bosch-2000.png" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
               </div>
@@ -253,8 +255,8 @@
           <a href="#">Доставка</a>
           <a href="#">Контакты</a>
         </p>
-        <address >г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-        +7 (812) 555-05-55</address>
+        <p class="bottom-menu__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+        +7 (812) 555-05-55</p>
         <p class="bottom-menu__promo">
           <a href="#">Материалы</a>
           <a href="#">Техника</a>
