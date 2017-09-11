@@ -158,7 +158,7 @@ a {
   padding-bottom: 13px;
 
   border: none;
-  background-color: inherit;
+  background-color: #33445a;
 }
 
 .search__submit {
@@ -175,7 +175,7 @@ a {
   cursor: pointer;
   opacity: 0.3;
 
-  background-color: inherit;
+  background-color: #33445a;
   border: none;
   background-image: url(../img/icon-search.svg);
   background-repeat: no-repeat;
@@ -196,6 +196,8 @@ a {
   background-image: url(../img/icon-search-red.svg);
 }
 
+.search__input-field::-webkit-input-placeholder,
+.search__input-field:-ms-input-placeholder,
 .search__input-field::placeholder {
   font-family: Cuprum, Arial, sans-serif;
   font-size: 17px;
@@ -204,6 +206,8 @@ a {
   opacity: 1;
 }
 
+.search__input-field:focus::-webkit-input-placeholder,
+.search__input-field:focus:-ms-input-placeholder,
 .search__input-field:focus::placeholder {
   color: #000000;
 }
@@ -1024,6 +1028,8 @@ a {
 .item__btn--buy {
   position: relative;
   padding: 10px 0;
+
+  color: #ffffff;
 
   -webkit-box-shadow: inset 0 -3px 0 #367315;
   box-shadow: inset 0 -3px 0 #367315;
