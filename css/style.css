@@ -22,7 +22,6 @@ body {
 
 a {
   text-decoration: none;
-  color: #ffffff;
   outline: none;
 }
 
@@ -121,6 +120,7 @@ a {
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
+  color: #ffffff;
 
   background-color: #fc003b;
   -webkit-box-shadow: 0 5px 0 #c0002d;
@@ -196,18 +196,15 @@ a {
   background-image: url(../img/icon-search-red.svg);
 }
 
-.search::-webkit-input-placeholder,
-.search:-ms-input-placeholder,
-.search::placeholder {
+.search__input-field::placeholder {
   font-family: Cuprum, Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
+  opacity: 1;
 }
 
-.search:focus::-webkit-input-placeholder,
-.search:focus:-ms-input-placeholder,
-.search:focus::placeholder {
+.search__input-field:focus::placeholder {
   color: #000000;
 }
 
@@ -220,6 +217,7 @@ a {
   font-size: 17px;
   line-height: 18px;
   word-wrap: break-word;
+  color: #ffffff;
 }
 
 .top-menu__link:hover,
@@ -574,6 +572,7 @@ a {
   vertical-align: middle;
   padding: 20px 31px 23px 24px;
   word-wrap: break-word;
+  color: #ffffff;
 }
 
 .main-menu a:hover,
@@ -670,6 +669,7 @@ a {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  color: #ffffff;
 
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 2px;
@@ -729,7 +729,6 @@ a {
   position: relative;
   overflow: hidden;
 
-  background-color: #8ed78f;
   background-repeat: no-repeat;
 }
 
@@ -757,10 +756,12 @@ a {
 }
 
 .promo-slider__item--1 {
+  background-color: #333028;
   background-image: url(../img/perforators.png);
 }
 
 .promo-slider__item--2 {
+  background-color: #594f43;
   background-image: url(../img/drills.png);
 }
 
@@ -1584,7 +1585,7 @@ a {
   background-repeat: no-repeat;
 }
 
-.filter__brands input:checked + label::before {
+.filter__checkbox:checked + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -1606,7 +1607,7 @@ a {
   background-repeat: no-repeat;
 }
 
-.filter__supply input:checked + label::before {
+.filter__radio:checked + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -2061,9 +2062,7 @@ a {
   border-radius: 2px;
 }
 
-.writeus::-webkit-input-placeholder,
-.writeus:-ms-input-placeholder,
-.writeus::placeholder {
+.writeus__text::placeholder {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
