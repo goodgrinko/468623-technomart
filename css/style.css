@@ -50,7 +50,7 @@ a {
   cursor: pointer;
   outline: none;
 
-  background-color: #ff5357;
+  background-color: #fc003b;
   border: none;
   border-radius: 3px;
 }
@@ -58,11 +58,11 @@ a {
 .btn:hover,
 .btn:focus {
   color: #ffffff;
-  background-color: #ca2c37;
+  background-color: #d60030;
 }
 
 .btn:active {
-  background-color: #ba2732;
+  background-color: #c5002b;
 }
 
 
@@ -96,7 +96,7 @@ a {
 .top-menu {
   width: 100%;
 
-  background-color: #33445a;
+  background-color: #293449;
 }
 
 .top-menu__wrapper {
@@ -158,7 +158,7 @@ a {
   padding-bottom: 13px;
 
   border: none;
-  background-color: #33445a;
+  background-color: #293449;
 }
 
 .search__submit {
@@ -175,7 +175,7 @@ a {
   cursor: pointer;
   opacity: 0.3;
 
-  background-color: #33445a;
+  background-color: #293449;
   border: none;
   background-image: url(../img/icon-search.svg);
   background-repeat: no-repeat;
@@ -196,8 +196,30 @@ a {
   background-image: url(../img/icon-search-red.svg);
 }
 
-.search__input-field::-webkit-input-placeholder,
-.search__input-field:-ms-input-placeholder,
+.search__input-field::-webkit-input-placeholder {
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.search__input-field:-ms-input-placeholder {
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.search__input-field::-ms-input-placeholder {
+  font-family: Cuprum, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+  opacity: 1;
+}
+
 .search__input-field::placeholder {
   font-family: Cuprum, Arial, sans-serif;
   font-size: 17px;
@@ -206,8 +228,18 @@ a {
   opacity: 1;
 }
 
-.search__input-field:focus::-webkit-input-placeholder,
-.search__input-field:focus:-ms-input-placeholder,
+.search__input-field:focus::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.search__input-field:focus:-ms-input-placeholder {
+  color: #000000;
+}
+
+.search__input-field:focus::-ms-input-placeholder {
+  color: #000000;
+}
+
 .search__input-field:focus::placeholder {
   color: #000000;
 }
@@ -309,7 +341,7 @@ a {
   width: 100%;
   min-height: 278px;
 
-  background-color: #f3f7f8
+  background-color: #f3f7f8;
 }
 
 .top-info {
@@ -323,7 +355,7 @@ a {
 .top-info__text {
   margin-left: 52px;
   padding-top: 32px;
-  width: 200px;
+  min-width: 200px;
 
   font-style: italic;
   font-size: 16px;
@@ -553,9 +585,9 @@ a {
 }
 
 .main-menu {
+  padding: 0 26px 0 25px;
   margin: auto;
   margin-top: 25px;
-  padding-left: 21px;
   width: 940px;
 
   font-size: 17px;
@@ -574,7 +606,7 @@ a {
 .main-menu a {
   display: inline-block;
   vertical-align: middle;
-  padding: 20px 31px 23px 24px;
+  padding: 20px 30px 23px 26px;
   word-wrap: break-word;
   color: #ffffff;
 }
@@ -1825,7 +1857,7 @@ a {
 .bottom-menu {
   width: 100%;
 
-  background-color: #3d546e;
+  background-color: #32425c;
 }
 
 .bottom-menu__wrapper {
@@ -1901,7 +1933,7 @@ a {
 .copyright {
   width: 100%;
 
-  background-color: #353f5b;
+  background-color: #293449;
 }
 
 .copyright__wrapper {
@@ -1939,7 +1971,7 @@ a {
   overflow: hidden;
   white-space: nowrap;
 
-  background-color: #212a3a;
+  background-color: #23273b;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -1948,7 +1980,7 @@ a {
 .social__btn:hover,
 .social__btn:focus,
 .social__btn:active {
-  background-color: #ee3643;
+  background-color: #fc003b;
 }
 
 .social__btn--vk {
@@ -1990,6 +2022,7 @@ a {
   left: 27%;
   top: 15%;
   width: 620px;
+  z-index: 1;
 
   border-top: 7px solid #ff1f51;
   background-color: #ffffff;
@@ -2068,6 +2101,18 @@ a {
   border-radius: 2px;
 }
 
+.writeus__text::-webkit-input-placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #a9a9a9;
+}
+.writeus__text:-ms-input-placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #a9a9a9;
+}
 .writeus__text::placeholder {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
