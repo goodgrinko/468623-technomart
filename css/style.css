@@ -983,6 +983,10 @@ a {
   margin: auto;
 }
 
+.item__image img {
+  display: block;
+}
+
 .item__title {
   width: 190px;
   margin: 12px 0 40px;
