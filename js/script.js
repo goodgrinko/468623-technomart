@@ -57,7 +57,7 @@ if (popupContact) {
       emailContact.value = storageEmail;
       textContact.focus();
     } else {
-     nameContact.focus();
+      nameContact.focus();
    }
   })
 };
@@ -68,7 +68,6 @@ formContact.addEventListener('submit', function (evt) {
     popupContact.classList.remove('modal-error');
     popupContact.offsetWidth;
     popupContact.classList.add('modal-error');
-
   } else {
     localStorage.setItem('nameContact', nameContact.value);
     localStorage.setItem('emailContact', emailContact.value);
