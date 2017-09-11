@@ -204,14 +204,6 @@ a {
   opacity: 1;
 }
 
-.search__input-field::-ms-input-placeholder{
-  font-family: Cuprum, Arial, sans-serif;
-  font-size: 17px;
-  line-height: 18px;
-  color: #ffffff;
-  opacity: 1;
-}
-
 .search__input-field:-ms-input-placeholder {
   font-family: Cuprum, Arial, sans-serif;
   font-size: 17px;
@@ -229,10 +221,6 @@ a {
 }
 
 .search__input-field:focus::-webkit-input-placeholder {
-  color: #000000;
-}
-
-.search__input-field:focus::-ms-input-placeholder {
   color: #000000;
 }
 
