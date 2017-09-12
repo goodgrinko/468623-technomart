@@ -156,6 +156,7 @@ a {
   min-width: 223px;
   padding-top: 11px;
   padding-bottom: 13px;
+  font-family: Cuprum, Arial, sans-serif;
 
   border: none;
   background-color: #293449;
@@ -630,6 +631,7 @@ a {
   right: 0;
   width: 60px;
   height: 59px;
+  z-index: 1;
 
   background-image: url(../img/new.png);
   background-repeat: no-repeat;
@@ -1019,6 +1021,7 @@ a {
   top:0;
   left: 0;
   padding: 44px 42px 0;
+  z-index: 10;
 
   background-color: #fff;
 }
@@ -2068,6 +2071,7 @@ a {
 
 .writeus__text {
   padding: 7px 11px 9px;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
 .writeus textarea {
@@ -2154,7 +2158,7 @@ a {
 }
 
 .modal-basket__actions {
-  margin: 37px auto;
+  margin: 32px 80px;
 }
 
 .btn--basket {
